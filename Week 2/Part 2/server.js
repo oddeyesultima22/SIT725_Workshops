@@ -6,7 +6,6 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "public")));
 
-// Utility function to validate input numbers
 const validateNumbers = (num1, num2, res) => {
   if (isNaN(num1) || isNaN(num2)) {
     res.status(400).json({ error: "Invalid input. Please provide valid numbers." });
@@ -15,7 +14,6 @@ const validateNumbers = (num1, num2, res) => {
   return true;
 };
 
-// GET request for Addition
 app.get("/add", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
@@ -23,7 +21,6 @@ app.get("/add", (req, res) => {
   res.json({ result: num1 + num2 });
 });
 
-// GET request for Subtraction
 app.get("/subtract", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
@@ -31,7 +28,6 @@ app.get("/subtract", (req, res) => {
   res.json({ result: num1 - num2 });
 });
 
-// GET request for Multiplication
 app.get("/multiply", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
@@ -39,7 +35,6 @@ app.get("/multiply", (req, res) => {
   res.json({ result: num1 * num2 });
 });
 
-// GET request for Division
 app.get("/divide", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
