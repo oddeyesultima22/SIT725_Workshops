@@ -1,0 +1,32 @@
+/* Give the body some breathing room */
+body {
+    background-color: #fafafa;
+    margin-bottom: 50px;
+  }
+  
+  /* Constrain calculator within a card */
+  .card {
+    margin-top: 40px;
+    padding: 20px;
+  }
+  
+  /* For uniform button sizing and consistent look */
+  .calc-button {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  /* Make the display look bigger and right-aligned */
+  #display {
+    text-align: right;
+    font-size: 1.5rem;
+  }
+  
+  /* Hide the bottom border for the display input field 
+     (Materialize style tweak) */
+  .input-field input[type="text"] {
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+  
